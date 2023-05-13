@@ -12,9 +12,7 @@ export default function Home() {
 
   return (
     <main >
-      <h1>Este es el titulo</h1>
-      <button type="button" className="btn btn-primary" onClick={() => handleClick() }>Primary</button>
-      <Button variant="primary">HOLA</Button>
+      <h1>Ejercicios en React</h1>
     </main>
   )
 }

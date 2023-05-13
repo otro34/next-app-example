@@ -1,3 +1,5 @@
+'use client';
+
 import Header from '../../components/Header/Header'
 
 const AboutUs = () => {
@@ -7,6 +9,7 @@ const AboutUs = () => {
             <h2>
             ACERCA DE NOSOTROS
             </h2>
+            <button type="button" className="btn btn-primary">Primary</button>
         </div>
 
     )

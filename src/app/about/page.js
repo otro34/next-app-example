@@ -9,7 +9,7 @@ const AboutUs = () => {
             <h2>
             ACERCA DE NOSOTROS
             </h2>
-            <button type="button" className="btn btn-primary">Primary</button>
+            <button type="button" className="btn btn-success">Primary</button>
         </div>
 
     )

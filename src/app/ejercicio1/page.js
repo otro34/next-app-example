@@ -1,6 +1,8 @@
-'use client';
-import Button from 'react-bootstrap/Button'
+'use client'
+
 import { useState } from 'react'
+
+import Button from '../../components/Button/Button.jsx'
 
 const Ejercicio1 = () => {
     
@@ -20,12 +22,15 @@ const Ejercicio1 = () => {
                 Agregar un botón contador de Clicks.
             </p>
             <Button 
-                variant="outline-primary"
-                onClick={() => handleClick() }>HAZME CLICK</Button>
+                onClick={handleClick}
+                value="HAZME CLICK" />
 
             <p>
                 Uds ha hecho click { contador } veces. 
             </p>
+            <div>
+                A simple primary alert—check it out!
+            </div>
         </div>
     )
 } 

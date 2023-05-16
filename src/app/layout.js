@@ -1,11 +1,16 @@
 "use client"
 
+import 'bootstrap/dist/css/bootstrap.css'; // Add this line
+import 'bootstrap/dist/js/bootstrap' ;
+
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { useEffect } from 'react';
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
 
   return (
     <html lang="en">
@@ -15,3 +20,7 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+export default dynamic(() => Promise.resolve(RootLayout), {
+  ssr: false,
+});

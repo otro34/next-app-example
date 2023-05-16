@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Form from 'react-bootstrap/Form'
 
 const Ejercicio3 = () => {
 
@@ -14,11 +15,11 @@ const Ejercicio3 = () => {
             Ejercicio 3
             </h2>
             Agregar una busqueda al ejercicio 3
-            <input
+            <Form.Control 
                 type="text"
                 value={textBusqueda}
                 onChange={e => setTextBusqueda(e.target.value)}
-                ></input>
+                ></Form.Control>
             <ul>
                     { arr.filter(f => f.includes(textBusqueda))
                         .map(fruta =>{

@@ -1,8 +1,11 @@
 'use client';
 
+import TopBar from "@/components/TopBar/TopBar";
+
 const Ejercicio6 = () => {
     return (
         <div>
+            <TopBar />
             <h2>
             Ejercicio 6
             </h2>

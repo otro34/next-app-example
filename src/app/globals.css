@@ -9,3 +9,15 @@ body {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
+
+.container {
+  display: flex;
+}
+
+.contenedorMenu {
+  width: 10%
+}
+
+.principal {
+  width: 90%;
+}

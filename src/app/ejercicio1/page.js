@@ -1,6 +1,16 @@
 'use client';
 
-const Ejercicio5 = () => {
+const Ejercicio1 = () => {
+
+    const username = window.localStorage.username;
+    const lastname = window
+                    .sessionStorage
+                    .lastname;
+    const userObject = JSON.parse(window
+                        .localStorage
+                        .userObject)
+
+    console.log(userObject)
 
     return (
         <div>
@@ -10,8 +20,14 @@ const Ejercicio5 = () => {
             <p>
                 Uso de session y local storage
             </p>
+            <p>
+                Hola: {username} {lastname}
+            </p>
+            <p>
+User Object: {userObject?.user} {userObject.grade}
+            </p>
         </div>
     )
 } 
 
-export default Ejercicio5
+export default Ejercicio1

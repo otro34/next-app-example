@@ -4,6 +4,18 @@ import styles from './page.module.css'
 import Link from '../components/Link/Link.jsx';
 
 export default function Home() {
+
+  window.localStorage.setItem("username", "Juan");
+  window.sessionStorage.setItem("lastname", "Perez");
+
+  window
+  .localStorage
+  .setItem("userObject", 
+  JSON.stringify({user: "jromaina", 
+                grade: 5}));
+
+  //window.localStorage.removeItem("")
+
   return (
     <main >
       <h1>Ejercicios en React</h1>
@@ -20,12 +32,6 @@ export default function Home() {
         </li>
         <li>
           <Link href="/ejercicio4" text="Ejercicio 4" />
-        </li>
-        <li>
-          <Link href="/ejercicio5" text="Ejercicio 5" />
-        </li>
-        <li>
-          <Link href="/ejercicio6" text="Ejercicio 6" />
         </li>
       </ul>
       <div>

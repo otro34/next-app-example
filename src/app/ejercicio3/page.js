@@ -1,33 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react'
-import Form from 'react-bootstrap/Form'
-
-const Ejercicio3 = () => {
-
-    const frutas = ["Manzana", "Pera", "Naranja", "Mandarina", "Pomelo"]
-    const [arr, setArr] = useState(frutas)
-    const [textBusqueda, setTextBusqueda] = useState("")
+const Ejercicio5 = () => {
 
     return (
         <div>
             <h2>
-            Ejercicio 3
+                Ejercicio 4
             </h2>
-            Agregar una busqueda al ejercicio 3
-            <Form.Control 
-                type="text"
-                value={textBusqueda}
-                onChange={e => setTextBusqueda(e.target.value)}
-                ></Form.Control>
-            <ul>
-                    { arr.filter(f => f.includes(textBusqueda))
-                        .map(fruta =>{
-                        return (<li key={fruta} >{fruta}</li>)
-                    }) } 
-            </ul>
+            <p>
+                Uso de cookies
+            </p>
         </div>
     )
 } 
 
-export default Ejercicio3
+export default Ejercicio5

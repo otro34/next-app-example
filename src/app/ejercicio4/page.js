@@ -1,18 +1,17 @@
 'use client';
 
-const Ejercicio3 = () => {
+const Ejercicio5 = () => {
 
     return (
         <div>
             <h2>
-            Ejercicio 4
+                Ejercicio 5
             </h2>
             <p>
-                Crear un componente compartido. El componente deberá renderizar un chip. 
-                Usar el chip para renderizar el contenido de la lista.   
+                USo de geolocalización
             </p>
         </div>
     )
 } 
 
-export default Ejercicio3
+export default Ejercicio5

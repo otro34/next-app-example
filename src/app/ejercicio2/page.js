@@ -1,31 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react'
-
-const Ejercicio2 = () => {
-
-    const [arr, setArr] = useState([])
-
-    useEffect(() => {
-        setArr(["Manzana", "Pera", "Naranja", "Mandarina"])
-    }, [])
+const Ejercicio5 = () => {
 
     return (
         <div>
             <h2>
-            Ejercicio 2
+                Ejercicio 2
             </h2>
-            Imprimir el contenido de un arreglo de forma dinámica.
-
-            <ul>
-                    {
-                        arr.map(fruta =>{
-                            return (<li key={fruta}>{fruta}</li>)
-                        })
-                    }
-            </ul>
+            <p>
+                Uso de fetch / axios
+            </p>
         </div>
     )
 } 
 
-export default Ejercicio2
+export default Ejercicio5

@@ -1,15 +1,22 @@
 'use client';
 
-import api from '@/api/course.js'
+import courseapi from '@/api/course.js'
+import { useEffect, useState } from 'react'
 
 const Ejercicio5 = () => {
 
-    const get = async () => {
-        const datos = await api.get()
-        console.log(datos)
+    const datosDefault = { name: "", avatar: ""}
+    const [ datos, setDatos ] = useState(datosDefault);
+    const [ busqueda, setBusqueda ] = useState(1)
+    
+    const handleOnClick = async () => {
+        const datosRaw = await courseapi.get(busqueda);
+        setDatos(datosRaw.data)
     }
 
-    get()
+    useEffect(()=> {
+        handleOnClick();
+    },[])
 
     return (
         <div>
@@ -19,6 +26,16 @@ const Ejercicio5 = () => {
             <p>
                 Uso de fetch / axios
             </p>
+            <div>
+                <input type="text"
+                    value={busqueda}
+                    onChange={e => setBusqueda(e.target.value)}></input>
+                <button onClick={() => handleOnClick()}>CONSULTA</button>
+            </div>
+            <p>
+                {datos.name}
+            </p>
+            <img src={datos.avatar} />
         </div>
     )
 } 
